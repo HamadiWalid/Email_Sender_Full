@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="box">
+    <div class="inner-box">
+        <div class="forms-wrap">
+            <form action="http://localhost:5253/api/mail/send" method="post" enctype="multipart/form-data" autocomplete="off" class="mail-form">
+                <div class="logo">
+                    <h4><i class="fa-solid fa-envelope"></i> Email Sender</h4>
+                </div>
+
+                <div class="heading">
+                    <h2>Let's talk</h2>
+                    <h6>We're here to help!</h6>
+                </div>
+
+                <div class="actual-form">
+                    <div class="input-wrap">
+                        <input type="text" name="ToEmail" class="input-field" autocomplete="off" required placeholder=" " />
+                        <label class="lb">Email</label>
+                    </div>
+
+                    <div class="input-wrap">
+                        <input type="text" name="Subject" class="input-field" autocomplete="off" required placeholder=" " />
+                        <label class="lb">Service</label>
+                    </div>
+                    <div class="input-wrap">
+                        <textarea name="Body" class="input-field" autocomplete="off" required placeholder=" "></textarea>
+                        <label class="lb">Description</label>
+                    </div>
+                    <div class="upload-area mt-5">
+                        <label for="file-input">
+                            <i class="fa-solid fa-upload"></i>
+                            <p>Choose files to upload</p>
+                        </label>
+                        <input type="file" id="file-input" name="Attachments" multiple>
+                        <div id="num-of-files">No files chosen</div>
+                        <ul id="files-list"></ul>
+                    </div>
+
+                    <input type="submit" value="Send" class="send-btn text-white mt-5" />
+                </div>
+            </form>
+
+
+        </div>
+
+
+
+
+        <!-- map with Google Map -->
+        <div class="map">
+            <!-- Google Map Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12750.065063294478!2d3.112420923725374!3d36.700309053527664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb3d1f1f1f1d9%3A0x8c2f6438d254d67f!2sBeau%20Lieux%2C%20Oued%20Smar%2C%20Algiers%2C%20Algeria!5e0!3m2!1sen!2sdz!4v1692350926675!5m2!1sen!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
